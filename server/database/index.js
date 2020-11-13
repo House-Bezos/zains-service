@@ -3,10 +3,11 @@ mongoose.connect('mongodb://localhost/FEC');
 
 let productSchema = mongoose.Schema({
 
-  productName: {type: String, required: true}
-  images: {[type: String], required: true}
+  productName: {type: String, required: true},
+  images: [String]
 
 });
 
 let Product = mongoose.model('Product', productSchema);
+
 module.exports.Product = Product
