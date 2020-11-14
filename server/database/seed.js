@@ -2,24 +2,23 @@ const {Product} = require('./index');
 const mongoose = require('mongoose');
 const faker = require('faker');
 
-mongoose.connect('mongodb://localhost/FEC');
 
 for (var i = 0; i < 100; i++) {
   var imageArray = []
-  for (var j = 0; j < 7; j++) {
-    imageArray.push(faker.image.imageUrl())
+  var randomLEN = Math.floor(Math.random() * Math.floor(7))
+  for (var j = 0; j < randomLEN; j++) {
+    var randomIMG = Math.floor(Math.random() * Math.floor(50))
+    imageArray.push(`https://zainfecservice.s3.amazonaws.com/Random+Images/${randomIMG}.jpg`)
   }
   var product = new Product({
+    _id: i,
     productName: faker.commerce.productName(),
     images: imageArray
-  }).save((err, result) => {
+  }).save(result => {
     if (i === 100) {
-      exit();
+      mongoose.disconnect()
     }
   })
 
 }
 
-function exit() {
-  mongoose.disconnect();
-}
