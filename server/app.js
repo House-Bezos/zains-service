@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const app = express();
 const database = require('./database/index.js')
 
-
+app.use(express.static(__dirname + '/../client/dist'));
 app.use(bodyParser.urlencoded());
 
 app.get('/api/product/:id', (req, res) => {
