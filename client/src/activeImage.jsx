@@ -2,24 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 
-class CarouselItem extends React.Component {
+class ActiveImage extends React.Component {
   constructor(props){
     super(props)
     this.hoverHandler = this.hoverHandler.bind(this)
  }
 
   hoverHandler(event) {
-    this.props.changeActive(event.target.src)
+    console.log('This will zoom')
   }
 
   render() {
-
     return (
-      <div className="image">
-       <img onMouseOver={this.hoverHandler} src={this.props.image} width="40" height="50" />
+      <div>
+        <img onMouseOver={this.hoverHandler} src={this.props.activeImage} width="600" height="600" />
       </div>
     )
   }
 }
 
-export default CarouselItem
+export default ActiveImage;
