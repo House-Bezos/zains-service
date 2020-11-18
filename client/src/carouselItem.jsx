@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
+import {CarouselIMG} from './styleFile.jsx'
 
 class CarouselItem extends React.Component {
   constructor(props){
@@ -16,7 +17,8 @@ class CarouselItem extends React.Component {
 
     return (
       <div className="image">
-       <img onMouseOver={this.hoverHandler} src={this.props.image} width="40" height="50" />
+      <CarouselIMG onMouseOver={this.hoverHandler} src={this.props.image} />
+
       </div>
     )
   }
