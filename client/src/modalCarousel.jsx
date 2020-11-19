@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from "styled-components";
-import {ModalIMG, ModalContainerStyle, ModalActiveImageStyle, ModalProductNameStyle, ModalCarouselStyle} from './styleFile.jsx'
+import {ModalIMG, ModalContainerStyle, ModalActiveImageStyle, ModalProductNameStyle, ModalCarouselStyle, HeaderStyle, HeaderLine} from './styleFile.jsx'
 
 
 class ModalCarousel extends React.Component{
@@ -20,7 +20,6 @@ class ModalCarousel extends React.Component{
     this.setState({
       activeImage: event.target.src
     })
-    this.render()
   }
 
   activeOnClick() {
@@ -30,11 +29,15 @@ class ModalCarousel extends React.Component{
   render () {
     return (
       <ModalContainerStyle>
+        <HeaderStyle>
+          <p>Images</p>
+        </HeaderStyle>
+        <HeaderLine></HeaderLine>
         <ModalProductNameStyle>
           {this.state.productName}
         </ModalProductNameStyle>
         <ModalActiveImageStyle>
-          <img src={this.state.activeImage}  onClick={this.activeOnClick} width="600" height="600" />
+          <img src={this.state.activeImage}  onClick={this.activeOnClick} width="750" height="600" />
         </ModalActiveImageStyle>
         <ModalCarouselStyle>
         {this.state.images.map((image) => {
