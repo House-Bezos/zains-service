@@ -15,26 +15,62 @@ export const ModalStyle = styled.div`
   transform: translate(-50%, -50%);
   background-color: #FFF;
   padding: 20px;
-  width: 1200px;
-  height: 600px;
+  width: 80%;
+  height: 70%;
+  border: solid;
+  border-color: white;
+  border-width: thin;
+  border-radius: 5px;
  `;
 
  export const ModalContainerStyle = styled.div`
   display: grid;
-  height: 100vh;
-  grid-template-columns: 600px 200px 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-columns: repeat (20, 5%);
+  grid-template-rows: repeat(20, 5%);
  `;
- export const ModalActiveImageStyle = styled.div`
 
+ export const HeaderStyle = styled.div`
+  grid-column: 1 / span 1;
+  grid-row: 1;
+  align-self: end;
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 14px;
+  border-bottom: 2px solid #FF8F00;;
+  z-index:50;
+  font-weight: bold;
+
+`
+
+export const HeaderLine = styled.div`
+  grid-column: 1 / span 20;
+  grid-row: 2;
+  align-self: start;
+  width: 100%;
+  border-top: 2px solid #E7E7E7;
+  margin: -2px;
+  z-index: -50;
+`
+
+ export const ModalActiveImageStyle = styled.div`
+  grid-column: 1 / span 15;
+  grid-row: 3;
+  justify-self: center;
+  align-self: start;
+  margin-right: 20px;
  `;
 
  export const ModalProductNameStyle = styled.div`
-
+  grid-column: 17 / span 3;
+  grid-row: 3 / span 2;
+  justify-self: left;
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-size: 17px;
  `;
 
  export const ModalCarouselStyle = styled.div`
-
+ grid-column: 17 / span 3;
+ grid-row: 5 / span 2;
+ justify-self: left;
  `;
 
 export const BackgroundStyle = styled.div`
