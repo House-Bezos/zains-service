@@ -9,7 +9,7 @@ const Carousel = (props) => {
     <div>
       {props.images.map((image, index) => {
         return (
-          <CarouselItem image={image} changeActive={props.changeActive}/>
+          <CarouselItem image={image} key={index} changeActive={props.changeActive}/>
         )
       })}
     </div>

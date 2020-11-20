@@ -33,6 +33,7 @@ export const ModalStyle = styled.div`
   grid-column: 1 / span 1;
   grid-row: 1;
   align-self: end;
+  justify-self: center;
   font-family: verdana,arial,helvetica,sans-serif;
   font-size: 14px;
   border-bottom: 2px solid #FF8F00;;
@@ -90,6 +91,7 @@ export const CarouselIMG = styled.img`
   border-radius: 5px;
   margin-right: 10px
 `
+CarouselIMG.displayName = 'img';
 
 export const ModalIMG = styled.img`
   width: 40px;
@@ -98,3 +100,4 @@ export const ModalIMG = styled.img`
   border-color: lightgray;
   margin: 5px;
 `
+ModalIMG.displayName = 'img';
