@@ -1,17 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
+import {ActiveIMG} from './styleFile.jsx'
 
 
 class ActiveImage extends React.Component {
   constructor(props){
     super(props)
-    this.hoverHandler = this.hoverHandler.bind(this)
+    this.hoverHandlerOn = this.hoverHandlerOn.bind(this)
+    this.hoverHandlerOff = this.hoverHandlerOff.bind(this)
     this.clickHandler = this.clickHandler.bind(this)
  }
 
-  hoverHandler(event) {
-    console.log('This will zoom')
+  hoverHandlerOn(event) {
+    this.props.toggleZoomOn(event.target.src, event.pageX, event.pageY )
+  }
+
+  hoverHandlerOff() {
+    this.props.toggleZoomOff()
   }
 
   clickHandler() {
@@ -21,7 +27,7 @@ class ActiveImage extends React.Component {
   render() {
     return (
       <div>
-        <img onClick={this.clickHandler} onMouseOver={this.hoverHandler} src={this.props.activeImage} width="600" height="600" />
+        <ActiveIMG onClick={this.clickHandler} onMouseMove={this.hoverHandlerOn} onMouseLeave={this.hoverHandlerOff} src={this.props.activeImage}/>
       </div>
     )
   }
