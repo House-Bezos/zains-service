@@ -98,6 +98,25 @@ export const ModalIMG = styled.img`
   height: 50px;
   border: solid;
   border-color: lightgray;
+  padding: 2px;
   margin: 5px;
 `
 ModalIMG.displayName = 'img';
+
+export const ActiveIMG = styled.img`
+  width: 600px;
+  height: 600px;
+  cursor: zoom-in;
+ `
+ActiveIMG.displayName = 'img';
+
+export const ZoomModal = styled.div`
+  margin-left: 10px;
+  width: 50vw;
+  height: 80vh;
+  z-index: 1000;
+  background-image: url(${props => props.src});
+  background-size: 2000px 2000px;
+  background-position: ${props => props.x}% ${props => props.y}%;
+  background-repeat: no-repeat
+`;

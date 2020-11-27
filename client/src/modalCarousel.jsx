@@ -11,20 +11,16 @@ class ModalCarousel extends React.Component{
       productName: this.props.productName,
       images: this.props.images,
       activeImage: this.props.activeImage,
-    }
+     }
     this.carouselOnClick = this.carouselOnClick.bind(this)
-    this.activeOnClick = this.activeOnClick.bind(this)
-  }
+   }
 
   carouselOnClick(event) {
     this.setState({
-      activeImage: event.target.src
+      activeImage: event.target.src,
     })
   }
 
-  activeOnClick() {
-    console.log('this will zoom')
-  }
 
   render () {
     return (
