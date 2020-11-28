@@ -15,8 +15,8 @@ export const ModalStyle = styled.div`
   transform: translate(-50%, -50%);
   background-color: #FFF;
   padding: 20px;
-  width: 80%;
-  height: 70%;
+  width: fit-content;
+  height: fit-content;
   border: solid;
   border-color: white;
   border-width: thin;
