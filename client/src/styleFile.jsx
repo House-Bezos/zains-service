@@ -9,7 +9,7 @@ export const Container = styled.div`
 `;
 
 export const ModalStyle = styled.div`
-  position: relative;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
