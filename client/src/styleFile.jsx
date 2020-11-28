@@ -112,7 +112,7 @@ ActiveIMG.displayName = 'img';
 
 export const ZoomModal = styled.div`
   margin-left: 10px;
-  width: 50vw;
+  width: 80vw;
   height: 80vh;
   z-index: 1000;
   background-image: url(${props => props.src});
