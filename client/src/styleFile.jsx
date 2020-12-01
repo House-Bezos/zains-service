@@ -1,5 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -23,13 +21,13 @@ export const ModalStyle = styled.div`
   border-radius: 5px;
  `;
 
- export const ModalContainerStyle = styled.div`
+export const ModalContainerStyle = styled.div`
   display: grid;
   grid-template-columns: repeat (20, 5%);
   grid-template-rows: repeat(20, 5%);
  `;
 
- export const HeaderStyle = styled.div`
+export const HeaderStyle = styled.div`
   grid-column: 1 / span 1;
   grid-row: 1;
   align-self: end;
@@ -40,7 +38,7 @@ export const ModalStyle = styled.div`
   z-index:50;
   font-weight: bold;
 
-`
+`;
 
 export const HeaderLine = styled.div`
   grid-column: 1 / span 20;
@@ -50,9 +48,9 @@ export const HeaderLine = styled.div`
   border-top: 2px solid #E7E7E7;
   margin: -2px;
   z-index: -50;
-`
+`;
 
- export const ModalActiveImageStyle = styled.div`
+export const ModalActiveImageStyle = styled.div`
   grid-column: 1 / span 15;
   grid-row: 3;
   justify-self: center;
@@ -60,7 +58,7 @@ export const HeaderLine = styled.div`
   margin-right: 20px;
  `;
 
- export const ModalProductNameStyle = styled.div`
+export const ModalProductNameStyle = styled.div`
   grid-column: 17 / span 3;
   grid-row: 3 / span 2;
   justify-self: left;
@@ -68,7 +66,7 @@ export const HeaderLine = styled.div`
   font-size: 17px;
  `;
 
- export const ModalCarouselStyle = styled.div`
+export const ModalCarouselStyle = styled.div`
  grid-column: 17 / span 3;
  grid-row: 5 / span 2;
  justify-self: left;
@@ -81,7 +79,7 @@ export const BackgroundStyle = styled.div`
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, .7);
-`
+`;
 export const CarouselIMG = styled.img`
   width: 40px;
   height: 50px;
@@ -90,7 +88,7 @@ export const CarouselIMG = styled.img`
   border-width: thin;
   border-radius: 5px;
   margin-right: 10px
-`
+`;
 CarouselIMG.displayName = 'img';
 
 export const ModalIMG = styled.img`
@@ -100,14 +98,14 @@ export const ModalIMG = styled.img`
   border-color: lightgray;
   padding: 2px;
   margin: 5px;
-`
+`;
 ModalIMG.displayName = 'img';
 
 export const ActiveIMG = styled.img`
   width: 600px;
   height: 600px;
-  cursor: zoom-in;
- `
+  cursor: pointer;
+ `;
 ActiveIMG.displayName = 'img';
 
 export const ZoomModal = styled.div`
@@ -115,8 +113,8 @@ export const ZoomModal = styled.div`
   width: 90vw;
   height: 90vh;
   z-index: 1000;
-  background-image: url(${props => props.src});
+  background-image: url(${(props) => props.src});
   background-size: 2000px 2000px;
-  background-position: ${props => props.x}% ${props => props.y}%;
+  background-position: ${(props) => props.x}% ${(props) => props.y}%;
   background-repeat: no-repeat
 `;

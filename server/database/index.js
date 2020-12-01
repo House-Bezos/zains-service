@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');
+
 mongoose.connect('mongodb://localhost/FEC');
 
-let productSchema = mongoose.Schema({
+const productSchema = mongoose.Schema({
   _id: Number,
-  productName: {type: String, required: true},
-  images: [String]
+  productName: { type: String, required: true },
+  images: [String],
 
 });
 
-let Product = mongoose.model('Product', productSchema);
+const Product = mongoose.model('Product', productSchema);
 
-module.exports.Product = Product
+module.exports.Product = Product;

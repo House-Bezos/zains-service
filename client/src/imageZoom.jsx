@@ -1,25 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import styled from 'styled-components';
-import {ZoomModal} from './styleFile.jsx'
+import { ZoomModal } from './styleFile.jsx';
 
-
-class ImageZoom extends React.Component {
-  constructor(props){
-    super(props)
-
- }
-
-  render() {
-    if (this.props.showZoom) {
-      return (
-        <ZoomModal src={this.props.zoomParameters.imgSrc} x={this.props.zoomParameters.x} y={this.props.zoomParameters.y}>
-        </ZoomModal>
-      )
-    } else {
-      return null;
-    }
+const ImageZoom = (props) => {
+  if (props.showZoom) {
+    return (
+      <ZoomModal
+        src={props.zoomParameters.imgSrc}
+        x={props.zoomParameters.x}
+        y={props.zoomParameters.y}
+      />
+    );
   }
-}
+  return null;
+};
 
 export default ImageZoom;

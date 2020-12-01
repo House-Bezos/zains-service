@@ -1,19 +1,16 @@
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
-import ReactDOM from 'react-dom';
-import styled from 'styled-components';
-import CarouselItem from './carouselItem.jsx'
+import CarouselItem from './carouselItem.jsx';
 
-const Carousel = (props) => {
-
-  return (
-    <div>
-      {props.images.map((image, index) => {
-        return (
-          <CarouselItem image={image} key={index} changeActive={props.changeActive}/>
-        )
-      })}
-    </div>
-  )
-};
+const Carousel = (props) => (
+  <div>
+    {props.images.map((image) => (
+      <CarouselItem
+        image={image}
+        changeActive={props.changeActive}
+      />
+    ))}
+  </div>
+);
 
 export default Carousel;
